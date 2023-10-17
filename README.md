@@ -116,7 +116,7 @@ Setelah berhasil melakukan instalasi, lakukan beberapa konfigurasi tambahan beri
 
 ### 2.1 Konfigurasi Profil
 
-Buka terminal. Jalankan perintah berikut, ganti credential di dalam tanda kurung kurawal.
+Buka terminal. Jalankan perintah berikut, ganti credential dan hapus tanda kurung kurawal.
 
 1. Konfigurasi nama:
 
