@@ -2,6 +2,11 @@
 
 Repositori ini dibuat untuk mendemonstrasikan penggunaan Git dan GitHub untuk acara pengenalan Google Developer Student Clubs Institut Teknologi Telkom Surabaya.
 
+Pada Study Jam ini, pastikan anda telah memiliki:
+
+1. Git yang sudah terinstall di Sistem Operasi. Tutorial ada di bab 1.
+2. Akun GitHub, yang dapat dibuat di [**github.com**](https://github.com/).
+
 ## 1. Cara Menginstall Git
 
 
@@ -83,27 +88,47 @@ Repositori ini dibuat untuk mendemonstrasikan penggunaan Git dan GitHub untuk ac
 
     ![](./assets/19.%20Git%20bisa%20diakses%20di%20MSYS2%20maupun%20terminal%20bawaan%20Windows.png)
 
-### 2.1 Install Git di Linux
+### 1.2 Install Git di Linux
 
 Biasanya, Git sudah terinstall secara bawaan di sistem operasi berbasis Linux. Jika tidak, maka Git dapat diinstall menggunakan package manager setiap distro Linux.
 
-#### 2.1.1 Debian-based
+#### 1.2.1 Debian-based
 
 ```bash
 sudo apt install git
 ```
 
-#### 2.1.2 RPM-based
+#### 1.2.2 RPM-based
 
 ```bash
 sudo dnf install git
 ```
 
-#### 2.1.3 Arch-based
+#### 1.2.3 Arch-based
 
 ```bash
 sudo pacman -S git
 ```
 
+## 2. Konfigurasi Tambahan Git
 
+Setelah berhasil melakukan instalasi, lakukan beberapa konfigurasi tambahan berikut:
+
+### 2.1 Konfigurasi Profil
+
+Buka terminal. Jalankan perintah berikut, ganti credential di dalam tanda kurung kurawal.
+
+1. Konfigurasi nama:
+
+    ```bash
+    git config --global user.name "{Nama Lengkap}"
+    ```
+
+2. Konfigurasi email:
+
+    ```bash
+    git config --global user.email "{example@gmail.com}"
+    ```
+
+### 2.2 Konfigurasi SSH
 
