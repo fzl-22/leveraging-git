@@ -130,5 +130,45 @@ Buka terminal. Jalankan perintah berikut, ganti credential dan hapus tanda kurun
     git config --global user.email "{example@gmail.com}"
     ```
 
-### 2.2 Konfigurasi SSH
+### 2.2 Konfigurasi Protokol Transfer SSH
 
+Konfigurasi protokol transfer SSH yang digunakan Git ke Github dengan langkah-langkah berikut:
+
+Pertama-tama, cek apakah sudah ada pasangan kunci SSH atau belum dengan perintah berikut:
+
+```
+ls -al ~/.ssh
+```
+
+Jika tidak ada file dengan ekstensi `.pub`, artinya anda belum memiliki pasangan kunci tersebut. Jika sudah, anda dapat lompat langsung ke langkah nomor 4.
+
+1. Buka terminal, CMD, Powershell, atau sejenisnya.
+2. Buat pasangan kunci SSH (public dan private) di local machine dengan menjalankan perintah berikut:
+    ```bash
+    ssh-keygen -t ed25519 -C "{example@gmail.com}"
+    ```
+    Ganti email dengan email yang terdaftar di Github.
+3. Kemudian, anda akan diminta lokasi disimpannya file tersebut (lokasi default di Windows ada di `C:\Users\{USER}\.ssh\id_ed25519`). Biarkan default atau ubah sesuai keinginan. Tekan **Enter**, lalu anda akan dimintai password. Isikan password atau biarkan kosong (opsional). Tekan **Enter**, maka pasangan kunci public (dengan ekstensi `.pub`) dan private akan dibuat di lokasi tersebut.
+
+    ![](./assets/generate-ssh-key.png)
+
+4. Jalankan perintah berikut untuk mencetak public key yang barusan dibuat.
+
+    ```
+    cat ~/.ssh/id_ed25519.pub
+    ```
+    Perintah ini akan menampilkan public key dari pasangan kunci SSH, copy baris key tersebut mulai dari `id_ed25519.pub` hingga email anda.
+
+5. Buka [github.com](https://github.com), klik gambar profile di pojok kanan atas. Kemudian pilih **Settings** > **SSH and GPG keys** > **New SSH key**. Isikan judul unik, dan paste public key tadi ke field **Key**. Setelah itu klik **Add SSH key**.
+
+6. Buka terminal lagi, kemudian jalankan perintah berikut:
+    ```
+    ssh -T git@github.com
+    ```
+    Jika konfigurasi berhasil, anda akan mendapatkan output berikut:
+    ```
+    Hi {username_github}! You've successfully authenticated, but GitHub does not provide shell access.
+    ```
+    Konfigurasi protokol SSH untuk Github telah selesai. Jika gagal, silakan kunjungi [link berikut](https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey).
+
+Dengan ini, Git sudah mantap untuk digunakan :)
