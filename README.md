@@ -7,6 +7,8 @@ Pada Study Jam ini, pastikan anda telah memiliki:
 1. Git yang sudah terinstall di Sistem Operasi. Tutorial ada di bab 1.
 2. Akun GitHub, yang dapat dibuat di [**github.com**](https://github.com/).
 
+File materi dari presentasi dapat diakses di [PRESENTATION](./PRESENTATION.pdf).
+
 ## 1. Cara Menginstall Git
 
 
