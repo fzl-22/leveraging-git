@@ -148,7 +148,7 @@ Jika tidak ada file dengan ekstensi `.pub`, artinya anda belum memiliki pasangan
     ssh-keygen -t ed25519 -C "{example@gmail.com}"
     ```
     Ganti email dengan email yang terdaftar di Github.
-3. Kemudian, anda akan diminta lokasi disimpannya file tersebut (lokasi default di Windows ada di `C:\Users\{USER}\.ssh\id_ed25519`). Biarkan default atau ubah sesuai keinginan. Tekan **Enter**, lalu anda akan dimintai password. Isikan password atau biarkan kosong (opsional). Tekan **Enter**, maka pasangan kunci public (dengan ekstensi `.pub`) dan private akan dibuat di lokasi tersebut.
+3. Kemudian, anda akan diminta lokasi disimpannya file tersebut (lokasi default di Windows ada di `C:\Users\{USER}\.ssh\id_ed25519`). Biarkan default atau ubah sesuai keinginan. Tekan **Enter**, lalu anda akan dimintai password. Isikan password atau biarkan kosong (opsional). **Pastikan anda terus mengingat SSH passphares yang anda isikan**. Kemudian, tekan **Enter**, maka pasangan kunci public (dengan ekstensi `.pub`) dan private akan dibuat di lokasi tersebut.
 
     ![](./assets/generate-ssh-key.png)
 
